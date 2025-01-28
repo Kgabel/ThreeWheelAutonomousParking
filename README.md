@@ -13,6 +13,40 @@ This project implements an **automatic parallel parking system** for a **three-w
 - **Three-Wheeled Vehicle**: Adapted for tadpole configuration (two wheels in the front, one at the rear).
 - **Updated Parking Spaces**: Environment now features **12 parking spaces**.
 
+## Vehicle Kinematic Model
+
+The kinematic model for the vehicle is based on the following equations:
+
+- \( \dot{x} = v \cdot \cos(\psi) \)
+- \( \dot{y} = v \cdot \sin(\psi) \)
+- \( \dot{v} = a \)
+- \( \dot{\psi} = \frac{v \cdot \tan(\delta)}{L} \)
+
+Where:
+- \( x \), \( y \): Position
+- \( v \): Velocity
+- \( \psi \): Yaw angle
+- \( a \): Acceleration
+- \( \delta \): Steering angle
+- \( L \): Wheelbase
+
+### Control
+
+The system uses **Model Predictive Control (MPC)** for controlling the vehicle's speed and steering. The MPC optimizes the control inputs to guide the vehicle along the planned path, ensuring smooth and efficient navigation.
+
+## Automatic Parking
+
+Parallel parking involves several key steps:
+
+1. **Finding the Parking Spot**: The agent first identifies the optimal parking spot.
+2. **Arriving Angle**: The arriving angle is computed to determine the vehicle's orientation as it approaches the parking spot.
+3. **Ensure1 and Ensure2**:
+    - **Ensure1**: A coordinate chosen based on the arriving angle.
+    - **Ensure2**: A final coordinate where the parking maneuver is completed, planned using two circle equations to ensure the vehicle parks correctly.
+
+The agent uses **MPC** to control the vehicle as it maneuvers from **Ensure1** to **Ensure2** for successful parking.
+
+
 ## How to Run
 
 To set up the project, clone the repository and install dependencies:
