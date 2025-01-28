@@ -64,4 +64,4 @@ python main_autopark.py --x_start 0 --y_start 90 --psi_start 0 --parking 4
 ```
 
 ## References
-The original work and article on automatic parallel parking can be found on [Towards Data Science](https://towardsdatascience.com/automatic-parallel-parking-system-including-path-planning-path-tracking-and-parallel-parking-in-a-ece780b2e8e0).
+The original work and article on automatic parallel parking can be found on [Towards Data Science](https://towardsdatascience.com/automatic-parallel-parking-system-including-path-planning-path-tracking-and-parallel-parking-in-a-ece780b2e8e0) and this [Github](https://github.com/Pandas-Team/Automatic-Parking/tree/master) repository.
