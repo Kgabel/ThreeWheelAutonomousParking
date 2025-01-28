@@ -52,6 +52,10 @@ Parallel parking involves several key steps:
 
 The agent uses **MPC** to control the vehicle as it maneuvers from **Ensure1** to **Ensure2** for successful parking.
 
+## Visualize
+![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/Kgabel/ThreeWheelAutonomousParking/blob/main/GIF/result1.gif))
+
+![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/Kgabel/ThreeWheelAutonomousParking/blob/main/GIF/result2.gif))
 
 ## How to Run
 
