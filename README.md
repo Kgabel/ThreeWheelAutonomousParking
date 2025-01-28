@@ -13,10 +13,15 @@ This project implements an **automatic parallel parking system** for a **three-w
 - **Three-Wheeled Vehicle**: Adapted for tadpole configuration (two wheels in the front, one at the rear).
 - **Updated Parking Spaces**: Environment now features **12 parking spaces**.
 
-## Installation
+## How to Run
 
 To set up the project, clone the repository and install dependencies:
 ```bash
-git clone https://github.com/yourusername/Automatic-Parking.git
+https://github.com/Kgabel/ThreeWheelAutonomousParking.git
 cd Automatic-Parking
 pip install -r requirements.txt
+python main_autopark.py --x_start 0 --y_start 90 --psi_start 0 --parking 4
+```
+
+## References
+The original work and article on automatic parallel parking can be found on [Towards Data Science](https://towardsdatascience.com/automatic-parallel-parking-system-including-path-planning-path-tracking-and-parallel-parking-in-a-ece780b2e8e0).
