@@ -18,18 +18,11 @@ This project implements an **automatic parallel parking system** for a **three-w
 The kinematic model for the vehicle is based on the following equations:
 
 
-\[
-\dot{x} = v \cdot \cos(\psi)
-\]
-\[
-\dot{y} = v \cdot \sin(\psi)
-\]
-\[
-\dot{v} = a
-\]
-\[
-\dot{\psi} = \frac{v \cdot \tan(\delta)}{L}
-\]
+$$ \dot{x} = v \cdot \cos(\psi) $$
+$$ \dot{y} = v \cdot \sin(\psi) $$
+$$ \dot{v} = a $$
+$$ \dot{\psi} = \frac{v \cdot \tan(\delta)}{L} $$
+
 
 Where:
 - \( x \), \( y \): Position
