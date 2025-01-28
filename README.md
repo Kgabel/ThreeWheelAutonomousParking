@@ -19,18 +19,22 @@ The kinematic model for the vehicle is based on the following equations:
 
 
 $$ \dot{x} = v \cdot \cos(\psi) $$
+
 $$ \dot{y} = v \cdot \sin(\psi) $$
+
 $$ \dot{v} = a $$
+
 $$ \dot{\psi} = \frac{v \cdot \tan(\delta)}{L} $$
 
 
+
 Where:
-- \( x \), \( y \): Position
-- \( v \): Velocity
-- \( \psi \): Yaw angle
-- \( a \): Acceleration
-- \( \delta \): Steering angle
-- \( L \): Wheelbase
+- $x$, $y$: Position
+- $v$: Velocity
+- $\psi$: Yaw angle
+- $a$: Acceleration
+- $\delta$: Steering angle
+- $L$: Wheelbase
 
 ### Control
 
