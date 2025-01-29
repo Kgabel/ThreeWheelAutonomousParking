@@ -74,17 +74,44 @@ if __name__ == '__main__':
     #############################################################################################
 
     ################################## control ##################################################
+    # print('driving to destination ...')
+    # for i,point in enumerate(final_path):
+        
+    #         acc, delta = controller.optimize(my_car, final_path[i:i+MPC_HORIZON])
+    #         my_car.update_state(my_car.move(acc,  delta))
+    #         res = env.render(my_car.x, my_car.y, my_car.psi, delta)
+    #         logger.log(point, my_car, acc, delta)
+    #         cv2.imshow('environment', res)
+    #         key = cv2.waitKey(1)
+    #         if key == ord('s'):
+    #             cv2.imwrite('res.png', res*255)
+
+    # Add after the path planning section and before the control loop:
+    # Initialize video writer
+    frame = env.render(my_car.x, my_car.y, my_car.psi, 0)  # Get one frame to determine size
+    height, width = frame.shape[:2]
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # or use 'XVID'
+    out = cv2.VideoWriter('output.mp4', fourcc, 30.0, (width, height))
+
+    # Modify the control loop:
     print('driving to destination ...')
     for i,point in enumerate(final_path):
+        acc, delta = controller.optimize(my_car, final_path[i:i+MPC_HORIZON])
+        my_car.update_state(my_car.move(acc, delta))
+        res = env.render(my_car.x, my_car.y, my_car.psi, delta)
+        logger.log(point, my_car, acc, delta)
         
-            acc, delta = controller.optimize(my_car, final_path[i:i+MPC_HORIZON])
-            my_car.update_state(my_car.move(acc,  delta))
-            res = env.render(my_car.x, my_car.y, my_car.psi, delta)
-            logger.log(point, my_car, acc, delta)
-            cv2.imshow('environment', res)
-            key = cv2.waitKey(1)
-            if key == ord('s'):
-                cv2.imwrite('res.png', res*255)
+        # Convert to uint8 and write to video
+        frame_to_save = (res * 255).astype(np.uint8)
+        out.write(frame_to_save)
+        
+        cv2.imshow('environment', res)
+        key = cv2.waitKey(1)
+        if key == ord('s'):
+            cv2.imwrite('res.png', res*255)
+
+    # After the loop, add:
+    out.release()
 
 
     # zeroing car steer
