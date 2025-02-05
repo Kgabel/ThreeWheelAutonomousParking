@@ -1,6 +1,6 @@
-# Automatic Parallel Parking System for Three-Wheeled Tadpole Configuration
+# Autonomous Parallel Parking System for Three-Wheeled Tadpole Configuration
 
-This project implements an **automatic parallel parking system** for a **three-wheeled tadpole configuration vehicle** with **two wheels at the front** and **one at the rear**. The system includes **path planning**, **path tracking**, and **parallel parking** functionalities. The environment has been updated to include **12 parking spaces**.
+This project implements an **autonomous parallel parking system** for a **three-wheeled tadpole configuration vehicle** with **two wheels at the front** and **one at the rear**. The system includes **path planning**, **path tracking**, and **parallel parking** functionalities. The environment has been updated to include **12 parking spaces**.
 
 ## Features
 
